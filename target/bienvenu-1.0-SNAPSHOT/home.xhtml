@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>HOME</title>
+        <!-- Intégration de Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+        <div class="container text-center p-4 shadow bg-white rounded" style="max-width: 400px;">
+            
+            <h4 class="mb-2">choisissez une option </h4>
+            <!-- Premier formulaire avec bouton "ajouter" -->
+            <h:form>
+                <h:commandButton value="ajouter" action="#{NavigationBean.allerLieu()}" 
+                                 styleClass="btn btn-primary w-100 mb-3"/>
+            </h:form>
+
+            <!-- Deuxième formulaire avec bouton "visiter" -->
+            <h:form>
+                <h:commandButton value="visiter" 
+                                 styleClass="btn btn-secondary w-100 mb-3"/>
+            </h:form>
+
+            <!-- Troisième formulaire avec bouton "À propos" -->
+            <h:form>
+                <h:commandButton value="À propos" action="#{NavigationBean.allerAPropos()}" 
+                                 styleClass="btn btn-info w-100"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>

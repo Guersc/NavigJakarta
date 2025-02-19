@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Visiter les Lieux</title>
+        <!-- Intégration de Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+        <div class="container text-center p-4 shadow bg-white rounded" style="max-width: 800px;">
+            <h2 class="mb-4">infos lieu</h2>
+            <h:panelGroup>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Description</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ui  >
+                            <tr>
+                                <td>#{lieuBean.name}</td>
+                                <td>#{lieuBean.description}</td>
+                                <td>#{lieuBean.latitude}</td>
+                                <td>#{lieuBean.longitude}</td>
+                            </tr>
+                        </ui>
+                    </tbody>
+                </table>
+            </h:panelGroup>
+        </div>
+    </h:body>
+</html>
